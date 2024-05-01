@@ -6,7 +6,7 @@ How to configure a Keycloak to connect to another Keycloak as broker / IDP.
     # clone repo or just copy the script
     git clone git@github.com:UnicornChance/scripts.git
 
-    cd scripts
+    cd scripts/keycloak
 
     # run script
     ./keycloak-to-keycloak.sh
