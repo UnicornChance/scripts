@@ -106,7 +106,7 @@ Examples of two keycloak docker containers running and connecting together. Also
 
    2. Access UDS-Core keycloak at `keycloak.admin.uds.dev`
 
-   3. Create realm `internal`
+   3. Select realm `uds`
 
    4. Create client `kc-broker`
 
@@ -128,15 +128,13 @@ Examples of two keycloak docker containers running and connecting together. Also
    3. Create Identity Provider - keycloak OpenID Connect
       1. `Use discovery endpoint` - toggle off
 
-      2. `Authorization URL` - `https://sso.uds.dev/realms/external/protocol/openid-connect/auth`
-         1. ip output from earlier for internal keycloak container + internal port + auth endpoint
+      2. `Authorization URL` - `https://sso.uds.dev/realms/uds/protocol/openid-connect/auth`
 
-      3. `Token URL` - `https://sso.uds.dev/realms/external/protocol/openid-connect/token`
-         1. same as Authorization URL with token endpoint
+      3. `Token URL` - `https://sso.uds.dev/realms/uds/protocol/openid-connect/token`
 
-      4. `Client ID` - client id from internal keycloak = `kc-broker`
+      4. `Client ID` - client id from uds-core keycloak = `kc-broker`
 
-      5. `Client Secret` - client secret from internal keycloak credentials
+      5. `Client Secret` - client secret from uds-core keycloak credentials
 
 
 #### Trouble shooting commands
