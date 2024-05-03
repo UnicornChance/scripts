@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Notify user about the --debug flag
-echo "This script can be run with the --debug flag to start Keycloak in non-detached mode."
-
 # clean up existing docker container and network
 docker stop internal && docker rm internal
 docker stop external && docker rm external
