@@ -128,10 +128,10 @@ Examples of two keycloak docker containers running and connecting together. Also
    3. Create Identity Provider - keycloak OpenID Connect
       1. `Use discovery endpoint` - toggle off
 
-      2. `Authorization URL` - `https://sso.uds.dev/realms/internal/protocol/openid-connect/auth`
+      2. `Authorization URL` - `https://sso.uds.dev/realms/external/protocol/openid-connect/auth`
          1. ip output from earlier for internal keycloak container + internal port + auth endpoint
 
-      3. `Token URL` - `https://sso.uds.dev/realms/internal/protocol/openid-connect/token`
+      3. `Token URL` - `https://sso.uds.dev/realms/external/protocol/openid-connect/token`
          1. same as Authorization URL with token endpoint
 
       4. `Client ID` - client id from internal keycloak = `kc-broker`
