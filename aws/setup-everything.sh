@@ -4,6 +4,8 @@ echo ""
 echo "Setup / Create / Deploy everything."
 echo ""
 
+./sub-scripts/change-directory.sh
+
 ./sub-scripts/aws-auth-check.sh
 
 ./sub-scripts/aws-env-setup.sh
