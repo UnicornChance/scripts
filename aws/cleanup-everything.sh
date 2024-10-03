@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo ""
-echo "Clean remove UDS Core, IAC, and AWS Cluster"
-echo ""
+# Get the directory where this script is located
+CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-./sub-scripts/change-directory.sh
+# Source aws-env-setup.sh to ensure environment variables are set in the current session
+source "$CURRENT_DIR/sub-scripts/aws-env-setup.sh" "$CURRENT_DIR"
 
-./sub-scripts/core-remove-package.sh
+echo -e "\nClean remove UDS Core, IAC, and AWS Cluster.\n"
 
-./sub-scripts/aws-remove-iac.sh
-
-./sub-scripts/aws-remove-cluster.sh
+"$CURRENT_DIR/sub-scripts/core-remove-package.sh" "$CURRENT_DIR"
+"$CURRENT_DIR/sub-scripts/aws-remove-iac.sh" "$CURRENT_DIR"
+"$CURRENT_DIR/sub-scripts/aws-remove-cluster.sh" "$CURRENT_DIR"
