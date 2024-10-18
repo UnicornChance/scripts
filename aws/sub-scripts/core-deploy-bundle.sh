@@ -13,10 +13,10 @@ echo -e "\tDeploy Core Bundle.\n"
 cd "$UDS_CORE_PATH"
 
 # Export UDS_CONFIG environment variable
-export UDS_CONFIG="$UDS_CORE_PATH.github/bundles/uds-config.yaml"
+export UDS_CONFIG="$UDS_CORE_PATH.github/bundles/eks/uds-config.yaml"
 
 # Find the actual bundle file using wildcard expansion
-BUNDLE_FILE=$(find "$UDS_CORE_PATH.github/bundles" -name 'uds-bundle-uds-core-eks-nightly-*.tar.zst')
+BUNDLE_FILE=$(find "$UDS_CORE_PATH.github/bundles/eks" -name 'uds-bundle-uds-core-eks-nightly-*.tar.zst')
 
 # Run the uds deploy command and check for errors
 if ! uds deploy "$BUNDLE_FILE" --confirm; then

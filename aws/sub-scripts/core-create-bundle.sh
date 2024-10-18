@@ -14,7 +14,7 @@ echo -e "\tCreate Core CI Bundle.\n"
 cd $UDS_CORE_PATH
 
 # Run the uds create command and check for errors
-if ! uds create ".github/bundles" --confirm; then
+if ! uds create ".github/bundles/eks" --confirm; then
     echo -e "\tERROR: Failed to create Core CI Bundle. Exiting.\n"
     exit 1
 fi

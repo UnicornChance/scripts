@@ -12,7 +12,7 @@ echo -e "\tRemove UDS Core package.\n"
 cd $UDS_CORE_PATH
 
 # Find the actual bundle file using wildcard expansion
-BUNDLE_FILE=$(find "$UDS_CORE_PATH.github/bundles" -name 'uds-bundle-uds-core-eks-nightly-*.tar.zst')
+BUNDLE_FILE=$(find "$UDS_CORE_PATH.github/bundles/eks" -name 'uds-bundle-uds-core-eks-nightly-*.tar.zst')
 
 # Run the uds remove command and check for errors
 if ! uds remove "$BUNDLE_FILE" --confirm; then
